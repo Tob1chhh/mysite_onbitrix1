@@ -2,7 +2,7 @@
 $aMenuLinks = Array(
 	Array(
 		"Вакансии", 
-		SITE_DIR."/about_service/vacancys/", 
+		SITE_DIR."/about_service/vacancies/", 
 		Array(), 
 		Array(), 
 		"" 
