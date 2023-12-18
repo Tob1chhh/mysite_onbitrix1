@@ -20,7 +20,7 @@ $APPLICATION->SetTitle("Избранное");
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
 		"COMPONENT_TEMPLATE" => ".default",
-		"DETAIL_URL" => "#SITE_DIR#/#IBLOCK_CODE#/#ELEMENT_ID#/",
+		"DETAIL_URL" => "#SITE_DIR#/#IBLOCK_CODE#/#ELEMENT_CODE#/",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
 		"DISPLAY_NAME" => "Y",

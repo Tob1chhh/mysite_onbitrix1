@@ -62,7 +62,7 @@ $APPLICATION->SetTitle("Объявления");
 		"PAGER_SHOW_ALL" => "N",
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => ".default",
-		"PAGER_TITLE" => "Новости",
+		"PAGER_TITLE" => "Объявления",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"SEF_FOLDER" => "/ads/",
 		"SEF_MODE" => "Y",
@@ -85,8 +85,8 @@ $APPLICATION->SetTitle("Объявления");
 		"COMPONENT_TEMPLATE" => ".default",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
-			"section" => "",
-			"detail" => "#ELEMENT_ID#/",
+			"section" => "#SECTION_CODE#/",
+			"detail" => "#ELEMENT_CODE#/",
 			"search" => "search/",
 		)
 	),

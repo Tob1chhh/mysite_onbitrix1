@@ -82,8 +82,8 @@ $APPLICATION->SetTitle("Вакансии");
 		"SEF_FOLDER" => "/about_service/vacancies/",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
-			"section" => "",
-			"detail" => "#ELEMENT_ID#/",
+			"section" => "#SECTION_CODE#/",
+			"detail" => "#ELEMENT_CODE#/",
 		)
 	),
 	false
