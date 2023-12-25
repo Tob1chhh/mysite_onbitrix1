@@ -74,8 +74,6 @@ IncludeTemplateLangFile(__FILE__);
       </div>
     </div>
   </footer>
-
-  </div>
   <?
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/jquery-3.3.1.min.js" );
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/jquery-migrate-3.0.1.min.js" );
@@ -92,7 +90,5 @@ IncludeTemplateLangFile(__FILE__);
 
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/main.js" );
   ?>
-
-</body>
 
 </html>
