@@ -5,9 +5,6 @@ $APPLICATION->SetPageProperty("title", "Главная");
 $APPLICATION->SetPageProperty("keywords", "биржа недвижимости");
 $APPLICATION->SetPageProperty("description", "Биржа недвижимости - сайт, предназначенный для размещения объявлений о продаже недвижимости. На данном сайте предоставлен сервис, помогающий произвести покупку недвижимости, а также ее продажу.");
 ?>
-
-<?$APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");?>
-
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"news_list_slider", 
@@ -55,8 +52,9 @@ $APPLICATION->SetPageProperty("description", "Биржа недвижимост�
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"PROPERTY_CODE" => array(
 			0 => "SHORT_DESC",
-			1 => "PRICE",
-			2 => "",
+			1 => "CHECK_PRIORITY",
+			2 => "PRICE",
+			3 => "",
 		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
