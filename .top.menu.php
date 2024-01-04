@@ -34,6 +34,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"CSite::InGroup(array(1,8,6))" 
+	),
+	Array(
+		"Авторизация", 
+		SITE_DIR."/user/authorization.php", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>

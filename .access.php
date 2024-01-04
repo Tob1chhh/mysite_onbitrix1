@@ -1,10 +1,10 @@
 <?
-$PERM["paccount_seller"]["8"]="R";
-$PERM["paccount_seller"]["7"]="R";
-$PERM["paccount_seller"]["*"]="D";
 $PERM["paccount_buyer"]["8"]="R";
 $PERM["paccount_buyer"]["6"]="R";
 $PERM["paccount_buyer"]["*"]="D";
+$PERM["paccount_seller"]["8"]="R";
+$PERM["paccount_seller"]["7"]="R";
+$PERM["paccount_seller"]["*"]="D";
 $PERM["/"]["8"]="W";
 $PERM["/"]["*"]="R";
 $PERM["index.php"]["G5"]="W";
