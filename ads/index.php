@@ -2,9 +2,9 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Объявления");
 ?><?$APPLICATION->IncludeComponent(
-	"bitrix:news",
-	"news",
-	Array(
+	"bitrix:news", 
+	"news", 
+	array(
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "N",
 		"ADS" => "N",
@@ -22,11 +22,28 @@ $APPLICATION->SetTitle("Объявления");
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
-		"DETAIL_FIELD_CODE" => array("NAME","PREVIEW_PICTURE","TIMESTAMP_X",""),
+		"DETAIL_FIELD_CODE" => array(
+			0 => "NAME",
+			1 => "PREVIEW_PICTURE",
+			2 => "TIMESTAMP_X",
+			3 => "",
+		),
 		"DETAIL_PAGER_SHOW_ALL" => "N",
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
-		"DETAIL_PROPERTY_CODE" => array("COUNT_BATHROOMS","COUNT_FLOORS","SHORT_DESC","PRESENCE_GARAGE","SQUARE","CHECK_PRIORITY","LINKS_TO_EXTRES","PRICE",""),
+		"DETAIL_PROPERTY_CODE" => array(
+			0 => "COUNT_BATHROOMS",
+			1 => "COUNT_FLOORS",
+			2 => "SHORT_DESC",
+			3 => "PRESENCE_GARAGE",
+			4 => "SQUARE",
+			5 => "CHECK_PRIORITY",
+			6 => "LINKS_TO_EXTRES",
+			7 => "PRICE",
+			8 => "ADD_MATERIALS",
+			9 => "GALLERY",
+			10 => "",
+		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
@@ -39,8 +56,24 @@ $APPLICATION->SetTitle("Объявления");
 		"IBLOCK_TYPE" => "ads",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"LIST_FIELD_CODE" => array("NAME","PREVIEW_PICTURE",""),
-		"LIST_PROPERTY_CODE" => array("COUNT_BATHROOMS","COUNT_FLOORS","SHORT_DESC","PRESENCE_GARAGE","SQUARE","CHECK_PRIORITY","LINKS_TO_EXTRES","PRICE",""),
+		"LIST_FIELD_CODE" => array(
+			0 => "NAME",
+			1 => "PREVIEW_PICTURE",
+			2 => "",
+		),
+		"LIST_PROPERTY_CODE" => array(
+			0 => "COUNT_BATHROOMS",
+			1 => "COUNT_FLOORS",
+			2 => "SHORT_DESC",
+			3 => "PRESENCE_GARAGE",
+			4 => "SQUARE",
+			5 => "CHECK_PRIORITY",
+			6 => "LINKS_TO_EXTRES",
+			7 => "PRICE",
+			8 => "ADD_MATERIALS",
+			9 => "GALLERY",
+			10 => "",
+		),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
@@ -51,14 +84,13 @@ $APPLICATION->SetTitle("Объявления");
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 		"PAGER_PARAMS_NAME" => "arrPager",
-		"PAGER_SHOW_ALL" => "Y",
+		"PAGER_SHOW_ALL" => "N",
 		"PAGER_SHOW_ALWAYS" => "Y",
 		"PAGER_TEMPLATE" => "pagenav",
 		"PAGER_TITLE" => "Объявления",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"SEF_FOLDER" => "/ads/",
 		"SEF_MODE" => "Y",
-		"SEF_URL_TEMPLATES" => Array("detail"=>"#ELEMENT_CODE#/","news"=>"","section"=>"#SECTION_CODE#/"),
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "Y",
@@ -75,6 +107,13 @@ $APPLICATION->SetTitle("Объявления");
 		"USE_REVIEW" => "N",
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
-		"USE_SHARE" => "N"
-	)
+		"USE_SHARE" => "N",
+		"COMPONENT_TEMPLATE" => "news",
+		"SEF_URL_TEMPLATES" => array(
+			"news" => "",
+			"section" => "#SECTION_CODE#/",
+			"detail" => "#ELEMENT_CODE#/",
+		)
+	),
+	false
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
