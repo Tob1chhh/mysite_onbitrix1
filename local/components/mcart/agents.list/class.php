@@ -306,6 +306,7 @@ class AgentsList extends CBitrixComponent implements Controllerable, Errorable
             "filter" => array("UF_ACTIVITY" => 1),
             "limit" => $nav->getLimit(),
             "count_total" => true,
+            "offset" => $nav->getOffset(),
         ]);
 
         /**

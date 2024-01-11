@@ -15,8 +15,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-
-// print_r($arResult); // для разработки в конечном коде убрать
+ // для разработки в конечном коде убрать
 
 /*
  * Для постраничной навигации использовать компонент bitrix:main.pagenavigation
@@ -60,7 +59,19 @@ $this->setFrameMode(true);
                         </div>
                     </div>
                 </div>
-                <a class="star" data-agent_id=<?=$agent["ID"]?>>
+                <?if (isset($arResult["STAR_AGENTS"])) { ?>
+                    <? $is_favourite = 0;?>
+                    <? foreach($arResult["STAR_AGENTS"] as $ids_agents) { ?>
+                        <? if ($ids_agents == $agent["ID"]) { ?>
+                            <a class="star active" data-agent_id=<?=$agent["ID"]?>>
+                            <? $is_favourite = 1; ?>
+                        <? } ?>
+                    <? } ?>
+                    <? if($is_favourite == 0) { ?>
+                        <a class="star" data-agent_id=<?=$agent["ID"]?>>
+                    <? } ?>
+                <? } ?>
+                
                     <svg id='svg' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 4L14.472 9.26604L20 10.1157L16 14.2124L16.944 20L12 17.266L7.056 20L8 14.2124L4 10.1157L9.528 9.26604L12 4Z" stroke="#95929A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
